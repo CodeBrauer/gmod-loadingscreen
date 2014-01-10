@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(0);
-set_time_limit(3);
+@set_time_limit(3);
 
 $r       = mt_rand(1,3);
 $plname  = 'Player';
@@ -9,9 +9,9 @@ $map     = '';
 $avatar  = 'img/nouser.png';
 
 $authors = array(
-    1 => 'Metal Gear Solid OST - Encounter',
-    2 => 'Another Side - Battle Version',
-    3 => 'FTL OST - MilkyWay (Battle)'
+    1 => 'FIRST SONG NAME',
+    2 => 'SECOND SONG NAME',
+    3 => 'THIRD SONG NAME'
 );
 
 $pictures = array(1,2,3);
@@ -21,7 +21,7 @@ if (isset($_GET['mapname']))
     $map = '<br>You will play the map: '.$_GET['mapname'];
 
 if (isset($_GET['steamid'])) {
-    $data = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=64CDF653E45DFF6144F74EE6501C43A5&steamids='.$_GET['steamid'];
+    $data = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&steamids='.$_GET['steamid'];
     $f = file_get_contents($data);
     $arr = json_decode($f, true);
     if (isset($arr['response']['players'][0]['personaname']))
