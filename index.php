@@ -48,7 +48,7 @@ if (isset($_GET['steamid'])) {
 </head>
 <body> 
     <audio autoplay loop>
-        <source src="music/<?php echo '1'?>.ogg" type="audio/ogg">
+        <source src="music/<?php echo $r?>.ogg" type="audio/ogg">
     </audio>
     <div class="container">
         <div class="jumbotron" style="margin-top: 50px;">
