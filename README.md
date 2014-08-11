@@ -21,6 +21,10 @@ a garrys mod loading screen
 - rules.php for showing rules after server join for the `motd` (ULX has to be installed)
 
 
+## pull requests
+
+please don't send me pull request. I planned to make the project better for people that have no "idea" of programming - so I will make it my freetime. At the moment there is no time - but soon!
+
 ## how to use
 
 * put 3 music files in `.ogg`-format in the music folder. They must be named `1.ogg`, `2.ogg` and `3.ogg`!
