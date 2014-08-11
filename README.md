@@ -23,7 +23,7 @@ a garrys mod loading screen
 
 ## pull requests
 
-please don't send me pull request. I planned to make the project better for people that have no "idea" of programming - so I will make it my freetime. At the moment there is no time - but soon!
+please don't send me any pull requests. I planned to make the project better for people that have no "idea" of programming - so I will make it my freetime. At the moment there is no time - but soon!
 
 ## how to use
 
