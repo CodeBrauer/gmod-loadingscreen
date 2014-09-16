@@ -43,6 +43,7 @@ if (isset($_GET['steamid'])) {
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro">
 
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
