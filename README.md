@@ -3,6 +3,11 @@ gmod-loadingscreen
 
 a garrys mod loading screen
 
+## a new version is coming soon!
+It can be found here: [CodeBrauer/gmod-loadingscreen-2](https://github.com/CodeBrauer/gmod-loadingscreen-2) 
+(currently in development)
+
+
 ## demo
 
 **[see it in action here // can be a modified version..](http://gabrielw.de/gmod/?steamid=76561198051267973&mapname=test)**
