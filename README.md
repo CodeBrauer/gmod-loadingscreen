@@ -5,7 +5,7 @@ a garrys mod loading screen
 
 ## a new version is coming soon!
 It can be found here: [CodeBrauer/gmod-loadingscreen-2](https://github.com/CodeBrauer/gmod-loadingscreen-2) 
-(currently in development)
+(currently in planning)
 
 
 ## demo
