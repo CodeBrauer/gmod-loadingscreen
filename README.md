@@ -1,31 +1,32 @@
 gmod-loadingscreen
 ==================
 
-a garrys mod loading screen
+add a loading screen for your garrys mod server!
 
-## demo
+## See it in action
 
-**[see it in action here // can be a modified version..](http://gabrielw.de/gmod/?steamid=76561198051267973&mapname=test)**
+**[Demo - slightly modified](http://gabrielw.de/gmod/?steamid=76561198051267973&mapname=test)**
 
-**[Screenshot](http://i.imgur.com/kdmSZ18.png)**
+![Screenshot](http://i.imgur.com/kdmSZ18.png)
 
-## features
+## Features
 
+- Basic template built with bootstrap (responsive)
 - Image slideshow with random pictures
 - Random music with autoplay in background
-- welcome message with steam-player name
-- show on which map the player will join
-- show current music title
+- Welcome message with steam-player name
+- Show on which map the player will join
+- Show current music title
 
-**additional**
+**Additional**
 - rules.php for showing rules after server join for the `motd` (ULX has to be installed)
 
+## Requirements
 
-## pull requests
+- PHP5.3+
+- The script [needs allow_url_fopen=1](http://php.net/manual/de/filesystem.configuration.php#ini.allow-url-fopen)
 
-please don't send me any pull requests. I planned to make the project better for people that have no "idea" of programming - so I will make it my freetime. At the moment there is no time - but soon!
-
-## how to use
+## Installation
 
 * put 3 music files in `.ogg`-format in the music folder. They must be named `1.ogg`, `2.ogg` and `3.ogg`!
 * put the music artists on line 12-14 in `index.php`
@@ -39,9 +40,8 @@ please don't send me any pull requests. I planned to make the project better for
 
 The server name and the content of the page can be easily edited with basic knowledge of HTML. in the next version there will be a easy config file so its easier to customize :bowtie:
 
-_requires php5_ &middot; _styled with [bootstrap](http://getbootstrap.com/) & [cyborg theme](http://bootswatch.com/cyborg/)_
+## Pull requests
 
+Feel free to send a PR to improve this!
 
-
-
-
+_styled with [bootstrap](http://getbootstrap.com/) & [cyborg theme](http://bootswatch.com/cyborg/)_
