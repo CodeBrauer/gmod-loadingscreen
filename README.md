@@ -3,6 +3,12 @@ gmod-loadingscreen
 
 add a loading screen for your garrys mod server!
 
+## V2 is coming soon!
+
+![gif](https://media.giphy.com/media/2x4b4X7yUnmww/giphy.gif)
+
+Check it out here https://github.com/CodeBrauer/gmod-loadingscreen/tree/v2.0
+
 ## See it in action
 
 **[Demo - slightly modified](http://gabrielw.de/gmod/?steamid=76561198051267973&mapname=test)**
