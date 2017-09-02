@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome to gmod-loadingscreen</title>
+    <meta charset="utf-8">
+    <title>gmod-loadingscreen</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
 </head>
 <body>
-    Welcome <span data-personaname></span> - you will join on <span data-mapname></span>
-    <br>
-    <img src="" data-avatarfull>
-    <script src="app.js"></script>
+    <div class="overlay">
+        <h1>gmod-loadingscreen</h1>
+        <div class="container">
+
+            <div class="box server-info">
+                <h2>Info</h2>
+                <ul>
+                    <li>
+                        <img class="player-avatar" data-avatarfull src="http://placehold.it/256x256" alt="Player Avatar">
+                        <p>
+                            Hello<strong data-personaname></strong>, welcome to <span data-servername></span>, have fun and enjoy your session!
+                        </p>
+                    </li>
+                    <li>
+                        <i class="icon-map"></i> <span data-mapname></span>
+                    </li>
+                    <li>
+                        <i class="icon-people"></i> <span data-players-online></span>/<span data-maxplayers></span> players online
+                    </li>
+                    <li>
+                        <i class="icon-game-controller"></i> <span data-gamemode></span>
+                    </li>
+                    <li>
+                        <i class="icon-social-steam"></i> <span data-status></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="box rules">
+                <h2>Rules</h2>
+                <ul data-rules>
+
+                </ul>
+            </div>
+            <div class="loadingbar">
+                <div class="progress" style="width:0%"></div>
+                Downloading <span class="file" data-currentfile></span>
+                <span class="percentage">
+                    (<span data-files-loaded></span>/<span data-files-total></span>) 
+                    <span data-percentage></span>%
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/demo.js"></script>
 </body>
 </html>
