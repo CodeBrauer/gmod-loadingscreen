@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Coolvetica';
-    src: url('https://codebrauer.github.io/gmod-loadingscreen/assets/fonts/CoolveticaRg-Regular.eot');
-    src: url('https://codebrauer.github.io/gmod-loadingscreen/assets/fonts/CoolveticaRg-Regular.eot?#iefix') format('embedded-opentype'),
-        url('https://codebrauer.github.io/gmod-loadingscreen/assets/fonts/CoolveticaRg-Regular.woff') format('woff'),
-        url('https://codebrauer.github.io/gmod-loadingscreen/assets/fonts/CoolveticaRg-Regular.ttf') format('truetype');
+    src: url('../fonts/CoolveticaRg-Regular.eot');
+    src: url('../fonts/CoolveticaRg-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/CoolveticaRg-Regular.woff') format('woff'),
+        url('../fonts/CoolveticaRg-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
