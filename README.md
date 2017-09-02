@@ -5,7 +5,7 @@ Easy to install loadingscreen for your Garry's Mod, CS:GO, CS:S or any other sup
 
 ## Demo
 
-*coming soon*
+http://cdn.rawgit.com/CodeBrauer/gmod-loadingscreen/v2.0/index.html?steamid=76561198051267973&mapname=cs_office
 
 ## Features
 
@@ -21,8 +21,6 @@ Easy to install loadingscreen for your Garry's Mod, CS:GO, CS:S or any other sup
 ## Installation
 
 *coming soon*
-
-The server name and the content of the page can be easily edited with basic knowledge of HTML.
 
 ## Pull requests
 
