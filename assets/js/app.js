@@ -1,6 +1,6 @@
 var steamID             = getQueryVariable('steamid');
 var steamAPIURL         = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=' + gmodLS.steamWebApiKey + '&steamids=' + steamID;
-var crossOriginProvider = 'https://ignorecors-rvlqilkint.now.sh/?url=' + encodeURIComponent(steamAPIURL);
+var crossOriginProvider = 'https://ignorecors-obvvelezky.now.sh/?url=' + encodeURIComponent(steamAPIURL);
 
 /**
  * init everything
