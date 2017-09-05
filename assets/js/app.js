@@ -1,47 +1,55 @@
 var steamID             = getQueryVariable('steamid');
 var steamAPIURL         = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=' + gmodLS.steamWebApiKey + '&steamids=' + steamID;
-var crossOriginProvider = 'http://anyorigin.com/go?url=' + encodeURIComponent(steamAPIURL) + '&callback=?';
+var crossOriginProvider = 'https://ignorecors-rvlqilkint.now.sh/?url=' + encodeURIComponent(steamAPIURL);
 
 /**
  * init everything
  */
 document.body.style.backgroundImage = 'url(' + gmodLS.backgroundImg + ')';
-$('[data-mapname]').text(getQueryVariable('mapname'));
+dqs('[data-mapname]').innerText     = getQueryVariable('mapname');
 
 /* call SteamWebapi for personaname & avatar */
-$.getJSON(crossOriginProvider, function(data) {
-    $('[data-personaname]').text(' ' + data.contents.response.players[0].personaname);
-    $('[data-avatarfull]').attr('src', data.contents.response.players[0].avatarfull);
-});
+(function callSteamWebApi() {
+    var request = new XMLHttpRequest();
+    request.addEventListener('load', function () {
+        var data = JSON.parse(this.responseText);
+        console.log(data);
+        dqs('[data-personaname]').innerText = ' ' + data.response.players[0].personaname;
+        dqs('[data-avatarfull]').setAttribute('src', data.response.players[0].avatarfull);
+    });
+    request.open('GET', crossOriginProvider);
+    request.send();
+})();
 
 function updatePercentage(needed) {
-    var totalFiles = parseInt($('[data-files-total]').text());
+    var totalFiles = parseInt(dqs('[data-files-total]').innerText);
     var percentage = isNaN(totalFiles) ? '-' : (totalFiles-needed) / totalFiles * 100;
-    $('[data-percentage]').text(Math.round(percentage));
-    $('.progress').width(percentage + '%');
+    
+    dqs('[data-percentage]').innerText = Math.round(percentage);
+    dqs('.progress').style.width       = percentage + '%';
 }
 /**
  * gmod called functions
  */
 function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode ) {
-    $('[data-servername]').text(servername);
-    $('[data-maxplayers]').text(maxplayers);
-    $('[data-gamemode]').text(gamemode);
+    dqs('[data-servername]').innerText = servername;
+    dqs('[data-maxplayers]').innerText = maxplayers;
+    dqs('[data-gamemode]').innerText   = gamemode;
 }
 function DownloadingFile( fileName ) {
-    $('[data-currentfile]').text(fileName);
+    dqs('[data-currentfile]').innerText = fileName;
 }
 function SetFilesTotal( total ) {
-    $('[data-files-total]').text(total);
+    dqs('[data-files-total]').innerText = total;
 }
 function SetFilesNeeded( needed ) {
-    var totalFiles = parseInt($('[data-files-total]').text());
-    var loaded     = isNaN(totalFiles) ? '-' : totalFiles-needed;
-    $('[data-files-loaded]').text(loaded);
+    var totalFiles = parseInt(dqs('[data-files-total]').innerText);
+    var loaded     = isNaN(totalFiles) ? '-' : totalFiles - needed;
+    dqs('[data-files-loaded]').innerText = loaded;
     updatePercentage(needed);
 }
 function SetStatusChanged( status ) {
-    $('[data-status]').text(status);
+    dqs('[data-status]').innerText = status;
 }
 
 // data-players-online
