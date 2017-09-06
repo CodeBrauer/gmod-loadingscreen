@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>gmod-loadingscreen skeleton</title>
+    <style type="text/css">
+        * {box-sizing: border-box;}
+        body {font-family: sans-serif;}
+        .line { border-bottom: 1px solid;width: 450px; margin: 4px 0; }
+        .line code {display: inline-block;width: 200px;font-size: 14px;}
+        .loadingbar {width: 100%; padding: 13px 15px; position: relative; border: 1px solid; }
+        .loadingbar .percentage {float: right; }
+        .progress {position: absolute; background: rgba(208, 208, 208, .5); top: 0;left: 0; height: 100%; }
+    </style>
+</head>
+<body>
+    <h1>GMOD-LOADINGSCREEN SKELETON</h1>
+    <p>
+        This a skeleton template - you can just use the data-attributes to fill the element with the specified content.<br>
+        Some tips:
+        <ul>
+            <li>Remove "demo.js" from this page if you finished testing</li>
+            <li>For testing append a query string like this to your file: <code>?steamid=76561198051267973&mapname=test</code></li>
+        </ul>
+    </p>
+    <h2>Attributes demo</h2>
+    <div class="line">
+        <code>[data-avatarfull]:</code>
+        <img class="player-avatar" data-avatarfull src="http://placehold.it/256x256" alt="Player Avatar">
+    </div>
+    <div class="line">
+        <code>[data-personaname]:</code><span data-personaname></span>
+    </div>
+    <div class="line">
+        <code>[data-servername]:</code><span data-servername></span>
+    </div>
+    <div class="line">
+        <code>[data-mapname]:</code><span data-mapname></span>
+    </div>
+    <div class="line">
+        <code>[data-maxplayers]:</code><span data-maxplayers></span>
+    </div>
+    <div class="line">
+        <code>[data-gamemode]:</code><span data-gamemode></span>
+    </div>
+    <div class="line">
+        <code>[data-status]:</code><span data-status></span>
+    </div>
+    <div class="line">
+        <code>[data-rules]:</code>
+        <ul data-rules></ul>
+    </div>
+
+
+    <div class="loadingbar">
+        <div class="progress" style="width:0%"></div>
+        Downloading <span class="file" data-currentfile></span>
+        <span class="percentage">
+            (<span data-files-loaded></span>/<span data-files-total></span>) 
+            <span data-percentage></span>%
+        </span>
+    </div>
+
+    <audio autoplay loodiv></audio>
+
+    <script src="config.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/demo.js"></script>
+</body>
+</html>
