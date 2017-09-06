@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>gmod-loadingscreen skeleton</title>
+    <title>GMod-Loadingscreen | Skeleton</title>
     <style type="text/css">
         /* remove this css - it's just for demo purposes */
         * {box-sizing: border-box;}
@@ -15,58 +15,70 @@
     </style>
 </head>
 <body>
-    <h1>GMOD-LOADINGSCREEN SKELETON</h1>
-    <p>
-        This a skeleton template - you can just use the data-attributes to fill the element with the specified content.<br>
-        Some tips:
-        <ul>
-            <li>Remove "demo.js" from this page if you finished testing</li>
-            <li>For testing append a query string like this to your file: <code>?steamid=76561198051267973&mapname=test</code></li>
-        </ul>
-    </p>
-    <h2>Attributes demo</h2>
-    <div class="line">
-        <code>[data-avatarfull]:</code>
-        <img class="player-avatar" data-avatarfull src="http://placehold.it/256x256" alt="Player Avatar">
+
+    <div style="width: 50%;float: left;padding: 10px 20px;">
+        <h1>GMOD-LOADINGSCREEN SKELETON</h1>
+        <p>
+            This a skeleton template - you can just use the data-attributes to fill the element with the specified content.<br>
+            Some tips:
+            <ul>
+                <li>Remove "demo.js" from this page if you finished testing</li>
+                <li>For testing append a query string like this to your file:<br><code>?steamid=76561198051267973&mapname=test</code></li>
+            </ul>
+        </p>
+
+        <!-- BEGIN: loading bar demo -->
+        <div class="loadingbar">
+            <div class="progress" style="width:0%"></div>
+            Downloading <span class="file" data-currentfile></span>
+            <span class="percentage">
+                (<span data-files-loaded></span>/<span data-files-total></span>) 
+                <span data-percentage></span>%
+            </span>
+        </div>
+        <!-- END: loading bar demo -->
     </div>
-    <div class="line">
-        <code>[data-personaname]:</code><span data-personaname></span>
-    </div>
-    <div class="line">
-        <code>[data-servername]:</code><span data-servername></span>
-    </div>
-    <div class="line">
-        <code>[data-mapname]:</code><span data-mapname></span>
-    </div>
-    <div class="line">
-        <code>[data-maxplayers]:</code><span data-maxplayers></span>
-    </div>
-    <div class="line">
-        <code>[data-gamemode]:</code><span data-gamemode></span>
-    </div>
-    <div class="line">
-        <code>[data-status]:</code><span data-status></span>
-    </div>
-    <div class="line">
-        <code>[data-rules]:</code>
-        <ul data-rules></ul>
+    <div style="width: 50%;float: left;padding: 10px 20px;">
+        <h2>Attributes demo</h2>
+        <div class="line">
+            <code>[data-avatarfull]:</code>
+            <img class="player-avatar" data-avatarfull src="http://placehold.it/256x256" alt="Player Avatar">
+        </div>
+        <div class="line">
+            <code>[data-personaname]:</code><span data-personaname></span>
+        </div>
+        <div class="line">
+            <code>[data-servername]:</code><span data-servername></span>
+        </div>
+        <div class="line">
+            <code>[data-mapname]:</code><span data-mapname></span>
+        </div>
+        <div class="line">
+            <code>[data-maxplayers]:</code><span data-maxplayers></span>
+        </div>
+        <div class="line">
+            <code>[data-gamemode]:</code><span data-gamemode></span>
+        </div>
+        <div class="line">
+            <code>[data-status]:</code><span data-status></span>
+        </div>
+        <div class="line">
+            <code>[data-rules]:</code>
+            <ul data-rules></ul>
+        </div>
     </div>
 
-
-    <div class="loadingbar">
-        <div class="progress" style="width:0%"></div>
-        Downloading <span class="file" data-currentfile></span>
-        <span class="percentage">
-            (<span data-files-loaded></span>/<span data-files-total></span>) 
-            <span data-percentage></span>%
-        </span>
-    </div>
-
+    <div style="clear: both;"></div>
+    
+    <!-- required for audio playback - don't remove it, just empty the music array in the config.js -->
     <audio autoplay loodiv></audio>
 
+    <!-- this scripts are required -->
     <script src="config.js"></script>
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/app.js"></script>
+    
+    <!-- remove this script after testing -->
     <script src="assets/js/demo.js"></script>
 </body>
 </html>
