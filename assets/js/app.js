@@ -21,9 +21,9 @@ dqs('[data-mapname]').innerText     = getQueryVariable('mapname');
 })();
 
 /* load rules */
-gmodLS.rules.forEach(function(rule) {
+gmodLS.rules.forEach(function(rule, index) {
     var liNode = document.createElement('li');
-    liNode.innerHTML = rule;
+    liNode.innerHTML = (index+1) + '. ' + rule;
     dqs('[data-rules]').appendChild(liNode)
 });
 
