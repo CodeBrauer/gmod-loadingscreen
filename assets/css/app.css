@@ -12,7 +12,7 @@
 
 body {
     background-image: url(https://files.facepunch.com/s/f3f82956055e.jpg); /* fallback */
-    background-position: center center;
+    background-position: top center;
     background-size: cover;
     margin: 0;
     padding: 0;
