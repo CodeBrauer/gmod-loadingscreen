@@ -13,7 +13,6 @@ dqs('[data-mapname]').innerText     = getQueryVariable('mapname');
     var request = new XMLHttpRequest();
     request.addEventListener('load', function () {
         var data = JSON.parse(this.responseText);
-        console.log(data);
         dqs('[data-personaname]').innerText = ' ' + data.response.players[0].personaname;
         dqs('[data-avatarfull]').setAttribute('src', data.response.players[0].avatarfull);
     });
@@ -21,13 +20,22 @@ dqs('[data-mapname]').innerText     = getQueryVariable('mapname');
     request.send();
 })();
 
+/* load rules */
+gmodLS.rules.forEach(function(rule) {
+    var liNode = document.createElement('li');
+    liNode.innerHTML = rule;
+    dqs('[data-rules]').appendChild(liNode)
+});
+
+/* file loading progress percentage */
 function updatePercentage(needed) {
     var totalFiles = parseInt(dqs('[data-files-total]').innerText);
-    var percentage = isNaN(totalFiles) ? '-' : (totalFiles-needed) / totalFiles * 100;
+    var percentage = isNaN(totalFiles) ? 'N/A' : (totalFiles - needed) / totalFiles * 100;
     
     dqs('[data-percentage]').innerText = Math.round(percentage);
     dqs('.progress').style.width       = percentage + '%';
 }
+
 /**
  * gmod called functions
  */
@@ -40,11 +48,15 @@ function DownloadingFile( fileName ) {
     dqs('[data-currentfile]').innerText = fileName;
 }
 function SetFilesTotal( total ) {
+    if (parseInt(total) == 0) {
+        dqs('.loadingbar').style.display = 'none';
+    }
     dqs('[data-files-total]').innerText = total;
 }
 function SetFilesNeeded( needed ) {
+    var needed     = parseInt(needed);
     var totalFiles = parseInt(dqs('[data-files-total]').innerText);
-    var loaded     = isNaN(totalFiles) ? '-' : totalFiles - needed;
+    var loaded     = isNaN(totalFiles) ? 'N/A' : totalFiles - needed;
     dqs('[data-files-loaded]').innerText = loaded;
     updatePercentage(needed);
 }
