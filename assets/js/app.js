@@ -43,6 +43,9 @@ function updatePercentage(needed) {
     
     dqs('[data-percentage]').innerText = Math.round(percentage);
     dqs('.progress').style.width       = percentage + '%';
+    if (percentage == 100) {
+        dqs('[data-currentfile]').innerText = 'finished.';
+    }
 }
 
 /**
