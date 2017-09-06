@@ -26,7 +26,7 @@ SetFilesTotal( demofiles.length );
 var index = 0;
 setInterval(function() {
     if (index > demofiles.length) {return;}
-    DownloadingFile( demofiles[index] );
+    DownloadingFile( demofiles[index-1] );
     SetFilesNeeded( demofiles.length - index );
     index++;
 }, 200);
