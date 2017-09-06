@@ -2,13 +2,14 @@
     font-family: 'Coolvetica';
     src: url('../fonts/CoolveticaRg-Regular.eot');
     src: url('../fonts/CoolveticaRg-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/CoolveticaRg-Regular.woff') format('woff'),
-        url('../fonts/CoolveticaRg-Regular.ttf') format('truetype');
+         url('../fonts/CoolveticaRg-Regular.woff') format('woff'),
+         url('../fonts/CoolveticaRg-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 * { box-sizing: border-box; }
+
 body {
     background-image: url(https://files.facepunch.com/s/f3f82956055e.jpg); /* fallback */
     background-position: center center;
