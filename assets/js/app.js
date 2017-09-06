@@ -27,6 +27,15 @@ gmodLS.rules.forEach(function(rule) {
     dqs('[data-rules]').appendChild(liNode)
 });
 
+/* play music */
+if (gmodLS.musicFiles.length > 0) {
+    var randomMusic = Math.floor(Math.random() * gmodLS.musicFiles.length);
+    var musicSource = document.createElement('source');
+    musicSource.setAttribute('src', 'assets/' + gmodLS.musicFiles[randomMusic]);
+    dqs('audio').volume = gmodLS.musicVolume;
+    dqs('audio').appendChild(musicSource);
+}
+
 /* file loading progress percentage */
 function updatePercentage(needed) {
     var totalFiles = parseInt(dqs('[data-files-total]').innerText);

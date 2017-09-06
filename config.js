@@ -17,15 +17,13 @@ gmodLS.backgroundImg  = 'https://files.facepunch.com/s/f3f82956055e.jpg';
 /**
  * If you want music played in background add your music files here.
  * The music files must be in OGG format to be played correctly.
- * Please ensure the object syntax is valid. (Key:Value)
- * Key = Songname, Value = Path to Song
- * @type {Object}
+ * @type {Array}
  */
-gmodLS.musicFiles = {
-    'Song 1': 'music/1.ogg',
-    'Song 2': 'music/2.ogg',
-    'Song 3': 'music/3.ogg',
-};
+gmodLS.musicFiles = [
+    'music/1.ogg',
+    'music/2.ogg',
+    'music/3.ogg',
+];
 
 /**
  * Music volume (Float value, max=1)
