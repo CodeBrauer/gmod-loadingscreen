@@ -94,7 +94,7 @@ ul li:last-child {
     border-radius: 0 0 3px 3px;
 }
 
-ul li > * {
+ul li > *:not(span) {
     display: inline-block;
     vertical-align: middle;
 }
