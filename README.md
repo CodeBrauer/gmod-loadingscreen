@@ -11,7 +11,7 @@ http://cdn.rawgit.com/CodeBrauer/gmod-loadingscreen/v2.0/index.html?steamid=7656
 
 *coming soon*
 
-Check out development progress here https://github.com/CodeBrauer/gmod-loadingscreen/issues/22 (and of cause in the commits)
+Check out development progress here https://github.com/CodeBrauer/gmod-loadingscreen/issues/22 (and of course in the commits)
 
 **Additional**
 - rules.html (For MOTD for example provided with ULX (Ulysses) Mod)
